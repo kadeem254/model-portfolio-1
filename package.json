@@ -1,0 +1,37 @@
+{
+  "name": "model-portfolio",
+  "version": "1.0.0",
+  "description": "Model portfolio website.",
+  "main": "./src/app.js",
+  "scripts": {
+    "serve": "webpack serve -c webpack.dev.js --open",
+    "build": "webpack -c webpack.dev.js",
+    "watch": "webpack watch -c webpack.dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KDeeM/model-portfolio-1.git"
+  },
+  "author": "Alexander Kadeem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KDeeM/model-portfolio-1/issues"
+  },
+  "homepage": "https://github.com/KDeeM/model-portfolio-1#readme",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.0",
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "sass": "^1.54.7",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.10.1",
+    "webpack-remove-empty-scripts": "^0.8.1"
+  },
+  "dependencies": {
+    "@barba/core": "^2.9.7"
+  }
+}

@@ -1,0 +1,61 @@
+@use "../components/variables";
+@use "../components/mixins";
+@use "../components/clearfix";
+@use "../components/navigation";
+@use "../components/custom";
+@use "../main.scss";
+
+@media screen {
+
+  .about-section{
+    div.inner{
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+
+      text-align: center;
+      .sub-heading{
+        margin-bottom: 1rem;
+        font-size: 2.5em;
+      }
+      .text{
+        margin-bottom: 2rem;
+        font-size: 1.5em;
+      }
+
+      .profile{
+        max-width: 678px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        font-size: 1.5em;
+
+        .item{
+          display: flex;
+          flex-direction: row;
+          gap: .5rem;
+
+          .title{
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 678px){
+    .about-section{
+      div.inner{
+        text-align: left;
+        .text{
+          max-width: 678px;
+        }
+        .profile{
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+
+}

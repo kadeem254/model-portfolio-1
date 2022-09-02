@@ -1,0 +1,30 @@
+// Holds styles for custom classes to be reused across the site
+@media screen {
+  .inner {
+    position: relative;
+    &.inner-default {
+      padding: 0 1rem;
+    }
+  }
+
+  @media ( min-width: 678px ){
+    .inner {
+      &.inner-default {
+        padding: 0 2rem;
+      }
+    }
+  }
+
+  @media ( min-width: 990px ){
+    
+  }
+
+  @media ( min-width: 1200px ){
+    .inner {
+      &.inner-default {
+        max-width: 1920px;
+        margin: 0 auto;
+      }
+    }
+  }
+}

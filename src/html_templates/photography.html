@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%=htmlWebpackPlugin.options.title%></title>
+
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css" integrity="sha512-RvQxwf+3zJuNwl4e0sZjQeX7kUa3o82bDETpgVCH2RiwYSZVDdFJ7N/woNigN/ldyOOoKw8584jM4plQdt8bhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/brands.min.css" integrity="sha512-+oRH6u1nDGSm3hH8poU85YFIVTdSnS2f+texdPGrURaJh8hzmhMiZrQth6l56P4ZQmxeZzd2DqVEMqQoJ8J89A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- lightbox -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+  <!-- Header to hold the page navigation and logo -->
+  <header class="page-header navigation-container">
+    <div class="inner inner-default">
+      <a class="logo">
+        <p class="text">Alkan Grey</p>
+      </a>
+
+      <div class="navigation-content">
+        <nav class="nav navigation-menu">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="photography.html" class="nav-link">Photography</a>
+          <a href="commercial.html" class="nav-link">Commercial</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <div class="social-links">
+          <i class="link fa-brands fa-instagram"></i>
+          <i class="link fa-brands fa-tumblr"></i>
+        </div>
+      </div>
+
+      <p class="navigation-button"></p>
+    </div>
+  </header>
+
+  <!-- page content resides here unique to each page  -->
+  <main class="page-content">
+
+    <section class="photography-section" id="photography-section">
+      <div class="inner inner-default">
+
+        <h2 class="sub-heading">Photography</h2>
+
+      </div>
+      <div class="inner photo-container">
+        <ul class="photo-list">
+
+          <!-- test images
+            <img class="photo" src="https://via.placeholder.com/1280x1920.png" alt="" width="1280" height="1920">
+          -->
+
+          <a href="<%=require('../assets/images/photo01.jpg')%>" class="photo-frame" data-lightbox="Photo Gallery">
+            <img class="photo" src="<%=require('../assets/images/photo01.jpg')%>" alt="photoshoot 1" width="1280" height="1920">
+          </q>
+
+          <a href="<%=require('../assets/images/photo02.jpg')%>" class="photo-frame" data-lightbox="Photo Gallery">
+            <img class="photo" src="<%=require('../assets/images/photo02.jpg')%>" alt="photoshoot 2" width="1280" height="853">
+          </a>
+
+          <a href="<%=require('../assets/images/photo03.jpg')%>" class="photo-frame" data-lightbox="Photo Gallery">
+            <img class="photo" src="<%=require('../assets/images/photo03.jpg')%>" alt="photoshoot 3" width="1280" height="853">
+          </a>
+
+          <a href="<%=require('../assets/images/photo04.jpg')%>" class="photo-frame" data-lightbox="Photo Gallery">
+            <img class="photo" src="<%=require('../assets/images/photo04.jpg')%>" alt=photoshoot 4" width="1280" height="1920">
+          </a>
+
+          <a href="<%=require('../assets/images/photo05.jpg')%>" class="photo-frame" data-lightbox="Photo Gallery">
+            <img class="photo" src="<%=require('../assets/images/photo05.jpg')%>" alt="photoshoot 5" width="1280" height="1920">
+          </a>
+
+        </ul>
+        <!-- <img class="photo" src="<%=require('../assets/images/photo01.jpg')%>" alt="" width="1280" height="1920">
+        <img class="photo" src="<%=require('../assets/images/photo02.jpg')%>" alt="" width="1280" height="853">
+        <img class="photo" src="<%=require('../assets/images/photo03.jpg')%>" alt="" width="1280" height="853">
+        <img class="photo" src="<%=require('../assets/images/photo04.jpg')%>" alt="" width="1280" height="1920">
+        <img class="photo" src="<%=require('../assets/images/photo05.jpg')%>" alt="" width="1280" height="1920"> -->
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <div class="inner inner-default">
+      <p class="copyright"> &copy;2022, Alexander Kadeem | All rights reserved </p>
+    </div>
+  </footer>
+</body>
+</html>

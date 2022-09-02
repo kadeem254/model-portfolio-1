@@ -1,0 +1,15 @@
+// holds mixins used across the pages
+@mixin transition( $value ) {
+  transition: $value;
+  -o-transition: $value;
+  -moz-transition: $value;
+  -webkit-transition: $value;
+}
+
+@mixin transform( $value ) {
+  transform: $value;
+  -o-transform: $value;
+  -ms-transform: $value;
+  -moz-transform: $value;
+  -webkit-transform: $value;
+}

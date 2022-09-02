@@ -1,0 +1,117 @@
+@use "../components/variables";
+@use "../components/mixins";
+@use "../components/clearfix";
+@use "../components/navigation";
+@use "../components/custom";
+@use "../main.scss";
+
+@media screen {
+  .contact-section {
+    margin-top: 2rem;
+    div.inner {
+      .uvp {
+        margin-bottom: 1rem;
+        font-size: 1.5em;
+      }
+
+      .contact-form {
+        max-width: 480px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        .sub-heading {
+          margin-bottom: 1rem;
+          font-size: 2.5em;
+        }
+
+        input,
+        button,
+        textarea {
+          font-family: variables.$cormorant;
+          font-size: 1em;
+
+          $trs: all 0.3s ease-out;
+          @include mixins.transition($trs);
+          &:focus {
+            background-color: variables.$champagne-pink;
+          }
+        }
+
+        input {
+          padding: 0.25rem 0.5rem;
+          outline: none;
+          border: none;
+          border-bottom: 1px solid variables.$eerie-black;
+        }
+
+        .field {
+          display: flex;
+          flex-direction: column;
+          font-size: 1.25em;
+          label {
+            font-weight: 700;
+          }
+        }
+
+        .message-field {
+          textarea {
+            padding: 0.5rem;
+            height: 7.5rem;
+            resize: none;
+          }
+        }
+
+        .submission-field {
+          button {
+            width: fit-content;
+            padding: 0.5rem 2rem;
+            font-weight: 700;
+            background-color: variables.$silver-pink;
+            color: black;
+            &:focus {
+              background-color: variables.$champagne-pink;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 990px) {
+
+    .contact-section{
+      div.inner{
+        .contact-form{
+          max-width: 678px;
+          grid-template-columns: repeat( 2, 1fr );
+          column-gap: 2rem;
+
+          .sub-heading{
+            grid-area: 1 / 1 / 2 / 3;
+          }
+
+          .name-field{
+            grid-area: 2 / 1 / 3 / 2;
+          }
+
+          .email-field{
+            grid-area: 3 / 1 / 4 / 2;
+          }
+
+          .message-field{
+            grid-area: 2 / 2 / 4 / 3;
+          }
+
+          .submission-field{
+            grid-area: 4 / 1 / 5 / 2;
+          }
+        }
+      }
+    }
+
+  }
+}

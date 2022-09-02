@@ -1,0 +1,97 @@
+@use "../components/variables";
+@use "../components/mixins";
+@use "../components/clearfix";
+@use "../components/navigation";
+@use "../components/custom";
+@use "../main.scss";
+
+@media screen {
+
+  .landing-section{
+    div.inner{
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+
+      .image-container{
+        $clip-1: 5rem;
+
+        padding: .5rem;
+        width: fit-content;
+        max-width: 100%;
+
+        background-color: variables.$jet;
+        border-radius: 0 .25rem 0 .25rem;
+
+        clip-path: polygon( $clip-1 0%, 100% 0%, 100% calc(100% - $clip-1), calc( 100% - $clip-1 ) 100%, 0% 100%, 0% $clip-1 );
+
+        $trs: clip-path .3s ease-out;
+        @include mixins.transition( $trs );
+
+        .landing-image{
+          display: block;
+          width: 50vw;
+          height: auto;
+          min-width: 150px;
+          max-width: 240px;
+
+          background-color: #ccc;
+          border: 5px solid variables.$snow;
+
+          $trs: all .5s ease-out;
+          @include mixins.transition( $trs );
+        }
+
+        &:hover{
+          $clip-1: .5rem;
+          clip-path: polygon( $clip-1 0%, 100% 0%, 100% calc(100% - $clip-1), calc( 100% - $clip-1 ) 100%, 0% 100%, 0% $clip-1 );
+
+          .landing-image{
+            $trf: rotate( 7.5deg ) scale( 105% );
+            @include mixins.transform( $trf );
+          }
+        }
+      }
+
+      .landing-text{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+
+        .main-heading{
+          font-size: 3.5em;
+          color: variables.$champagne-pink;
+        }
+
+        .sub-heading{
+          font-size: 1.5em;
+          color: variables.$silver-pink;
+        }
+      }
+    }
+  }
+  
+  
+
+  @media (min-width: 678px){
+    .landing-section{
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      div.inner{
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+        .landing-text{
+          width: fit-content;
+        }
+      }
+    }
+  }
+
+}

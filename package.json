@@ -6,6 +6,7 @@
   "scripts": {
     "serve": "webpack serve -c webpack.dev.js --open",
     "build": "webpack -c webpack.dev.js",
+    "export": "webpack",
     "watch": "webpack watch -c webpack.dev.js"
   },
   "repository": {
